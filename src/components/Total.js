@@ -1,5 +1,8 @@
 window.Total = {}
 
 Total.view = function (ctrl) {
-  // View code goes here
+  return m('.total', [
+    m('label', "Total: "),
+    m('b', "$" + Total.calcPrice(attrs.discount, attrs.count))
+  ])
 }
